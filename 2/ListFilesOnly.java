@@ -3,7 +3,7 @@ import java.io.File;
 public class FilePropertiesExample {
     public static void main(String[] args) {
         // Create a File object
-        File file = new File("example.txt");
+        File file = new File("HTDemo.java");
 
         // Check if the file exists
         if (file.exists()) {
