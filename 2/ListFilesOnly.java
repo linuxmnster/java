@@ -1,21 +1,20 @@
 import java.io.File;
 
-public class ListFilesOnly {
+public class FilePropertiesExample {
     public static void main(String[] args) {
-        File folder = new File("C:\\My Web Sites");
+        // Create a File object
+        File file = new File("example.txt");
 
-        File[] files = folder.listFiles();
-
-        System.out.println("Files in the current directory:");
-
-        if (files != null) {
-            for (int i = 0; i < files.length; i++) {
-                if (files[i].isFile()) {
-                    System.out.println(files[i].getName());
-                }
-            }
+        // Check if the file exists
+        if (file.exists()) {
+            System.out.println("File Name: " + file.getName());
+            System.out.println("Absolute Path: " + file.getAbsolutePath());
+            System.out.println("Writable: " + file.canWrite());
+            System.out.println("Readable: " + file.canRead());
+            System.out.println("File Size (bytes): " + file.length());
+            System.out.println("Is it a directory? " + file.isDirectory());
         } else {
-            System.out.println("Folder not found or invalid.");
+            System.out.println("The file does not exist.");
         }
     }
 }
